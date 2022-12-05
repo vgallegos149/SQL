@@ -1,0 +1,44 @@
+--Create a beauty store database and stats
+
+/** VG Beauty:
+Mascara (6)
+Foundation (5)
+Eyeshadow Palette (5)
+Eyeliner (8)
+Lipstick (9)
+Setting Spray (4)
+Primer (3)
+Blush (7)
+Lashes (9)
+Lipgloss (6)
+Scrunchies (4)
+Hair Clips (6)
+Bobby Pins (4)
+Nail Polish (4)
+Makeup Remover (5)
+**/
+
+CREATE TABLE vg_beauty (id INTEGER PRIMARY KEY, item TEXT, aisle INTEGER, quantity INTEGER, price INTEGER);
+
+INSERT INTO vg_beauty VALUES (1, "Mascara", 7, 6, 9);
+INSERT INTO vg_beauty VALUES (2, "Foundation",7, 5, 11);
+INSERT INTO vg_beauty VALUES (3, "Eyeshadow Palette",7,5, 15);
+INSERT INTO vg_beauty VALUES (4, "Eyeliner",7, 8,8);
+INSERT INTO vg_beauty VALUES (5, "Lipstick",7, 9,14);
+INSERT INTO vg_beauty VALUES (6, "Setting Spray",7, 4,13);
+INSERT INTO vg_beauty VALUES (7, "Primer",7, 3, 5);
+INSERT INTO vg_beauty VALUES (8, "Blush", 7,7,6 );
+INSERT INTO vg_beauty VALUES (9, "Lashes", 7,9,8);
+INSERT INTO vg_beauty VALUES (10, "Lipgloss",7, 6,14);
+INSERT INTO vg_beauty VALUES (11, "Scrunchies",7,4, 5);
+INSERT INTO vg_beauty VALUES (12, "Hair Clips", 7, 6,5);
+INSERT INTO vg_beauty VALUES (13, "Bobby Pins", 7,4, 5);
+INSERT INTO vg_beauty VALUES (14, "Nail Polish", 7,4, 8);
+INSERT INTO vg_beauty VALUES (15, "Makeup Remover", 7,5, 5);
+
+--display the database order by price
+SELECT * FROM vg_beauty
+ORDER By price;
+
+--display the most expensive price 
+SELECT MAX(price) FROM vg_beauty; 
